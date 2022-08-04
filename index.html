@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/main.css" />
+        <link rel="stylesheet" href="./styles/options.css" />
+        <title>Connect Four</title>
+        <script defer type="module" src="./js/main.js"></script>
+    </head>
+    <body>
+        <div id="header-wrapper">
+            <h1>Connect</h1>
+            <input id="mode" value="4">
+        </div>
+        <p>Player 1's Turn</p>
+        <div id="options">
+            <label for="p1">Player 1</label>
+            <input type="text" id="p1" placeholder="Player 1"/>
+
+            <label for="p2">Player 2</label>
+            <input
+                type="text"
+                id="p2"
+                placeholder="If empty, player 2 is computer"
+            />
+
+            <label for="col">Columns</label>
+            <div>
+                <input type="text" id="col-text" value="7" />
+                <input type="range" min="0" max="50" value="7" id="col" />
+            </div>
+
+            <label for="row">Rows</label>
+            <div>
+                <input type="text" id="row-text" value="6" />
+                <input type="range" min="0" max="50" value="6" id="row" />
+            </div>
+        </div>
+        <div id="gameBoard"></div>
+        <div id="gameOver"></div>
+        <div id="gameOverText">
+            <h1>Player 1 Win</h1>
+            <button>Restart</button>
+        </div>
+    </body>
+</html>

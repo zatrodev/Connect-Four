@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
+body {
+    font-family: "DM Sans", sans-serif;
+}
+
+h1, p {
+    text-align: center;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+p {
+    position: relative;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+#gameOverText h1 {
+    position: relative;
+    margin: 5px;
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    font-weight: bolder;
+    z-index: 100;
+}
+
+button {
+    position: relative;
+    background-color: #0f2970;
+    border: none;
+    color: white;
+    margin: 5px;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+button:hover {
+    background-color: #1942b2;
+}
+
+#header-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameBoard {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 600px;
+    display: flex;
+    background: #4370f1;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border: 3px solid black;
+}   
+
+#gameOver {
+    position: absolute;
+    background-color: black;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 704.8px;
+    height: 604.8px;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.5s linear;
+}
+
+#gameOverText {
+    position: absolute;
+    width: 704.8px;
+    height: 604.8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+}
+
+.circle {
+    --circle-width: 100px;
+    --circle-height: 100px;
+    --circle-background: white;
+    --circle-zIndex: inherit;
+    align-items: center;
+    background: #4370f1;
+    display: flex;
+    width: var(--circle-width);
+    height: var(--circle-height);
+    justify-content: center;
+}
+
+.circle::after {
+    color: rgb(243, 183, 183);
+    background: var(--circle-background);
+    border-radius: 50%;
+    border: 3px solid black;
+    content: "";
+    cursor: pointer;
+    width: calc(var(--circle-width) - 25%);
+    height: calc(var(--circle-height) - 25%);
+    z-index: var(--circle-zIndex);
+}
