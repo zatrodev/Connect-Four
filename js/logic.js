@@ -101,7 +101,7 @@ export function checkIfHasAdjacentNodes(node, value, winCondition, indexes) {
         }
     }
 
-    // uncommented code below since it is not really
+    // commented code below since it is not really
     // necessary to check the previous, bottom,
     // bottom right, and bottom left if we already checked the next,
     // top, top right, and top left of that specific yellow or red circle
